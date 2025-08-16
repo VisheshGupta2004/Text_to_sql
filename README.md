@@ -31,12 +31,14 @@ Text_to_sql/
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Python 3.8+
 - Google AI API key (Gemini)
 
 ### Installation
 
 1. **Clone and setup**
+
    ```bash
    git clone https://github.com/yourusername/text-to-sql.git
    cd text-to-sql
@@ -45,13 +47,13 @@ Text_to_sql/
    # source venv/bin/activate  # Unix/Mac
    pip install -r requirements.txt
    ```
-
 2. **Configure API key**
+
    - Create `.env` file from `env.example`
    - Add your Google API key: `GOOGLE_API_KEY=your_key_here`
    - Get API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-
 3. **Run the app**
+
    ```bash
    streamlit run app.py
    ```
@@ -59,13 +61,15 @@ Text_to_sql/
 ## 📊 Database Schema
 
 The app works with a `STUDENT` table:
+
 - `NAME` - Student names
-- `CLASS` - Course/class information  
+- `CLASS` - Course/class information
 - `SECTION` - Section details
 
 ## 💡 Usage Examples
 
 Ask questions like:
+
 - "How many students are there?"
 - "Show me all students in Data Science class"
 - "List students in section A"
@@ -74,6 +78,7 @@ Ask questions like:
 ## 🔧 Configuration
 
 All settings are in `config.py`:
+
 - AI model configuration
 - Database paths
 - UI text and labels
@@ -84,7 +89,7 @@ All settings are in `config.py`:
 ### Adding Features
 
 - **New AI Models**: Extend `AIService` class
-- **New Databases**: Extend `DatabaseService` class  
+- **New Databases**: Extend `DatabaseService` class
 - **New UI**: Add methods to `UIComponents` class
 - **New Logic**: Extend `QueryProcessor` class
 
@@ -111,11 +116,3 @@ result = processor.process_natural_language_query("How many students?")
 3. Make your changes
 4. Test locally with `streamlit run app.py`
 5. Submit a pull request
-
-## 📄 License
-
-Apache License 2.0
-
----
-
-**Built with ❤️ using Streamlit and Google Gemini AI**
